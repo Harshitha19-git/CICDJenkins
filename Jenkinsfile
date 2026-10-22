@@ -6,7 +6,12 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
+       stage('Checkout') {
+    steps {
+        git branch: 'main',
+            url: 'https://github.com/Harshitha19-git/CICDJenkins.git'
+    }
+} stage('Checkout') {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/yourusername/python-app.git'
