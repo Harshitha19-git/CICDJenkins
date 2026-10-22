@@ -7,17 +7,11 @@ pipeline {
 
     stages {
        stage('Checkout') {
-    steps {
-        git branch: 'main',
-            url: 'https://github.com/Harshitha19-git/CICDJenkins.git'
+          steps {
+             git branch: 'main',
+                 url: 'https://github.com/Harshitha19-git/CICDJenkins.git'
     }
-} stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/yourusername/python-app.git'
-            }
-        }
-
+} 
         stage('Install') {
             steps {
                 bat 'pip install -r requirements.txt'
